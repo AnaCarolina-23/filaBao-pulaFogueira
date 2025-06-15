@@ -1,0 +1,134 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+
+/* Game container */
+.game-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-width: 600px;  /* Limita no desktop, mas deixa responsivo no mobile */
+  margin: 0 auto;    /* Centraliza no desktop */
+  background-color: #f3f4f6;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid black;
+   box-sizing: border-box;
+}
+
+
+.dino {
+  width: 8vw;
+  height: auto;
+  max-width: 100px;
+  max-height: 100px;
+  position: absolute;
+  bottom: 3vw;
+  left: 1.5vw;
+  transition: bottom 0.4s ease-out;
+}
+
+.dino.jump {
+  bottom: 300px;
+}
+
+.dino img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Obstacle */
+.obstacle {
+  position: absolute;
+  bottom: 0;
+  width: 6vw;
+  height: 10vw;
+  max-width: 100px;
+  max-height: 100px;
+  background-image: url("../assets/fogueira.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Score */
+.score {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #374151; /* text-gray-700 */
+}
+
+/* Game Over */
+.game-over {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.game-over-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.retry-button {
+  background-color: #ec522f; /* bg-blue-500 */
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* Breakpoint até 768px */
+@media(max-width: 768px) {
+  
+.dino {
+  width: 17vw;
+  height: auto;
+  max-width: 100px;
+  max-height: 100px;
+  position: absolute;
+  bottom: 3vw;
+  left: 2.5vw;
+  transition: bottom 0.5s ease-out;
+}
+
+.dino.jump {
+  bottom: 300px;
+}
+
+.dino img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Obstacle */
+.obstacle {
+  position: absolute;
+  bottom: 0;
+  width: 18vw;
+  height: 20vw;
+  max-width: 100px;
+  max-height: 100px;
+  background-image: url("../assets/fogueira.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+}
+
